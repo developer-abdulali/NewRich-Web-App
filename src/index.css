@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.homepage {
+  margin-top: 100px;
+}
+#links {
+  color: #111;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+}
+#btn {
+  border-radius: 6px;
+  background: #198fff;
+  width: 125px;
+  height: 45px;
+  padding: 10px;
+  outline: none;
+  border: none;
+  color: white;
+  font-weight: 600;
+}
+.logo {
+  margin-right: 19px;
+}
+
+/* .text_box {
+  margin-top: 20vh;
+} */
+
+.text_box {
+  margin-top: 20vh !important;
+}
+
+/* Media query for small screens */
+@media only screen and (max-width: 600px) {
+  .text_box {
+    margin-top: 0 !important;
+  }
+
+  .dreamers {
+    color: #198fff !important;
+    text-align: center !important;
+    font-size: 66.8px !important;
+    font-style: normal !important;
+    font-weight: 700 !important;
+    margin: 10px 0px !important;
+    text-transform: uppercase !important;
+  }
+}
+.dreamers {
+  color: #198fff !important;
+  text-align: center !important;
+  font-size: 66.8px !important;
+  font-style: normal !important;
+  font-weight: 700 !important;
+  margin: 10px 0px !important;
+  text-transform: uppercase !important;
+}
+
+.getStartedBtn {
+  width: 125px !important;
+  height: 45px !important;
+  padding: 10px !important;
+  color: white !important;
+  font-weight: 500 !important;
+  border-radius: 6px !important;
+  background: #198fff !important;
+}
+.community1 {
+  color: #313131 !important;
+  font-size: 32px !important;
+  font-style: normal !important;
+  font-weight: 500 !important;
+  line-height: normal !important;
+}
+.joinNow {
+  color: #198fff !important;
+  font-size: 42px !important;
+  font-style: normal !important;
+  font-weight: 600 !important;
+  line-height: normal !important;
+  margin-top: 10px !important;
+}
+.makeThings {
+  color: #313131 !important;
+  font-family: Barlow !important;
+  margin-top: 50px !important;
+  font-size: 48px !important;
+  font-style: normal !important;
+  font-weight: 600 !important;
+  line-height: normal !important;
+  text-transform: uppercase !important;
+}
+.getStartedBtn {
+  width: 150px !important;
+  height: 45px !important;
+  color: white !important;
+  font-weight: 500 !important;
+  outline: none !important;
+  border: none !important;
+  border-radius: 6px !important;
+  background: #198fff;
+  cursor: pointer;
+}
