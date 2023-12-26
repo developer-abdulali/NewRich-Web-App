@@ -99,10 +99,37 @@
   width: 150px !important;
   height: 45px !important;
   color: white !important;
-  font-weight: 500 !important;
+  font-weight: 800 !important;
   outline: none !important;
   border: none !important;
   border-radius: 6px !important;
   background: #198fff;
   cursor: pointer;
+}
+
+.grid {
+  display: flex !important;
+  align-items: center !important;
+  padding: 0px 10% !important;
+}
+/* Extra small devices (phones, 600px and down) */
+@media (max-width: 600px) {
+  .grid { 
+    display: none;
+    flex-direction: column-reverse;
+  }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .grid {
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .grid {
+    flex-direction: row;
+    justify-content: center;
+  }
 }
