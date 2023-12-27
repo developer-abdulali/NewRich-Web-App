@@ -27,7 +27,7 @@ import ProcessSec from "../../images/processSection.svg"
 
 const ProcessSection = () => {
   return (
-    <div>
+    <div style={{border: '1px solid red'}}>
         <img
           src={ProcessSec}
           alt="Process Img"

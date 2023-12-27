@@ -37,12 +37,16 @@
 //       icon: require("../../images/mindset.svg").default,
 //     },
 //   ];
+
 //   return (
-//     <Box className="features-section">
+//     <Box className="features-section" sx={{ py: 5 }}>
 //       <Container>
-//         <Grid container spacing={5}>
+//         <Grid container spacing={3}>
 //           <Grid item xs={12}>
-//             <Box className="features-section-heading">
+//             <Box
+//               className="features-section-heading"
+//               sx={{ textAlign: "center" }}
+//             >
 //               <Typography variant="h4">
 //                 Learn from thousands of instructors who are{" "}
 //                 <span>proven experts</span> in various fields{" "}
@@ -53,14 +57,23 @@
 
 //           {/* Features Items */}
 //           {featuresData.map((feature, index) => (
-//             <Grid key={index} item xs={12} sm={12} md={6} lg={3}>
-//               <Box className="features-item d-flex flex-column align-items-center text-center">
+//             <Grid key={index} item xs={12} sm={6} md={4} lg={3}>
+//               <Box
+//                 className="features-item d-flex flex-column align-items-center text-center"
+//                 sx={{ mb: 3 }}
+//               >
 //                 <img
 //                   src={feature.icon}
 //                   alt={`${feature.title} Icon`}
-//                   className="mb-4"
+//                   className="mb-2"
+//                   sx={{ width: "80%", maxWidth: 120 }}
 //                 />
-//                 <img src={SapratingLine} alt="Border Img" className="mb-3" />
+//                 <img
+//                   src={SapratingLine}
+//                   alt="Border Img"
+//                   className="mb-2"
+//                   sx={{ width: "40%" }}
+//                 />
 //                 <Typography variant="h6">{feature.title}</Typography>
 //               </Box>
 //             </Grid>
@@ -73,11 +86,7 @@
 
 // export default FeaturedSection;
 
-
-
-
-
-
+// 2nd code
 import React from "react";
 import { Container, Grid, Typography, Box } from "@mui/material";
 import SapratingLine from "../../images/sepratingLine.svg";
@@ -119,15 +128,51 @@ const FeaturedSection = () => {
   ];
 
   return (
-    <Box className="features-section" sx={{ py: 5 }}>
+    <Box className="features-section" sx={{ py: { xs: 3, md: 5 } }} style={{border: '1px solid red'}}>
       <Container>
-        <Grid container spacing={3}>
+        <Grid container spacing={3} alignItems="center">
           <Grid item xs={12}>
-            <Box className="features-section-heading" sx={{ textAlign: "center" }}>
-              <Typography variant="h4">
+            <Box
+              className="features-section-heading"
+              sx={{ textAlign: "center" }}
+            >
+              <Typography
+                variant="h4"
+                style={{
+                  color: "#111",
+                  textAlign: "center",
+                  fontSize: { xs: 28, md: 48 },
+                  fontStyle: "normal",
+                  fontWeight: 600,
+                  lineHeight: "normal",
+                }}
+              >
                 Learn from thousands of instructors who are{" "}
-                <span>proven experts</span> in various fields{" "}
-                <span>of lifestyle enhancement</span>
+                <span
+                  style={{
+                    color: "#1E92FF",
+                    fontSize: { xs: 28, md: 48 },
+                    fontStyle: "normal",
+                    fontWeight: 600,
+                    lineHeight: "normal",
+                    textTransform: "lowercase",
+                  }}
+                >
+                  proven experts
+                </span>{" "}
+                in various fields{" "}
+                <span
+                  style={{
+                    color: "#1E92FF",
+                    fontSize: { xs: 28, md: 48 },
+                    fontStyle: "normal",
+                    fontWeight: 600,
+                    lineHeight: "normal",
+                    textTransform: "lowercase",
+                  }}
+                >
+                  of lifestyle enhancement
+                </span>
               </Typography>
             </Box>
           </Grid>
@@ -135,14 +180,28 @@ const FeaturedSection = () => {
           {/* Features Items */}
           {featuresData.map((feature, index) => (
             <Grid key={index} item xs={12} sm={6} md={4} lg={3}>
-              <Box className="features-item d-flex flex-column align-items-center text-center" sx={{ mb: 3 }}>
+              <Box
+                className="features-item d-flex flex-column align-items-center text-center"
+                sx={{ mb: 3 }}
+              >
                 <img
                   src={feature.icon}
                   alt={`${feature.title} Icon`}
                   className="mb-2"
-                  sx={{ width: "80%", maxWidth: 120 }}
+                  style={{ marginLeft: 65 }}
+                  sx={{
+                    width: "80%",
+                    maxWidth: 120,
+                    mx: "auto",
+                    display: "block",
+                  }}
                 />
-                <img src={SapratingLine} alt="Border Img" className="mb-2" sx={{ width: "40%" }} />
+                <img
+                  src={SapratingLine}
+                  alt="Border Img"
+                  className="mb-2"
+                  sx={{ width: "40%", mx: "auto" }}
+                />
                 <Typography variant="h6">{feature.title}</Typography>
               </Box>
             </Grid>

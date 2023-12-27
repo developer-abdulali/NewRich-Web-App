@@ -22,6 +22,8 @@ import App from "./App";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import Navbar from "./components/Navbar/Navbar";
+import Footer from "./components/Footer/Footer";
+import { BrowserRouter as Router } from "react-router-dom";
 
 const theme = createTheme();
 
@@ -30,9 +32,11 @@ root.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Navbar />
-      <App />
+      <Router>
+        <Navbar />
+        <App />
+        <Footer />
+      </Router>
     </ThemeProvider>
   </React.StrictMode>
 );
-
