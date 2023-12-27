@@ -1,16 +1,13 @@
 import React from "react";
 import { withStyles, useTheme } from "@material-ui/core/styles";
-import {
-  Button,
-  Typography,
-  Container,
-  Box,
-  Grid,
-  CardMedia,
-} from "@material-ui/core";
+import { Typography, Box, Grid, CardMedia } from "@material-ui/core";
 import GrayWhiteCircle from "../../images/graywhite.svg";
 
 const styles = (theme) => ({
+  heroContainer:{
+    maxWidth: '100%',
+    overflow:"hidden"
+  },
   heroContent: {
     maxWidth: 600,
     textAlign: "center",
@@ -29,6 +26,7 @@ const styles = (theme) => ({
     [theme.breakpoints.down("sm")]: {
       marginTop: 0,
       textAlign: "center",
+      margin: theme.spacing(0, 2),
     },
   },
   dreamers: {
@@ -53,6 +51,8 @@ const styles = (theme) => ({
     lineHeight: "normal",
     [theme.breakpoints.down("xs")]: {
       fontSize: "22px !important",
+      fontStyle: "normal !important",
+      fontWeight: 500,
     },
     [theme.breakpoints.down("md")]: {
       fontSize: "22px",
@@ -88,10 +88,11 @@ const styles = (theme) => ({
 });
 
 const HeroSection = ({ classes }) => {
+  console.log({classes})
   const theme = useTheme();
 
   return (
-    <Box className={classes.heroContainer} style={{border: '1px solid red'}}>
+    <Box className={classes.heroContainer} >
       <Grid className="grid" container spacing={10}>
         <Grid item xs={12} md={7}>
           <Box className={classes.text_box}>
@@ -124,7 +125,7 @@ const HeroSection = ({ classes }) => {
             </Box>
           </Box>
         </Grid>
-        <Grid item xs={10} md={5}>
+        <Grid item xs={12} md={5}>
           <Box>
             <CardMedia
               className={classes.heroImage}

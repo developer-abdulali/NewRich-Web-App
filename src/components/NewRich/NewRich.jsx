@@ -6,6 +6,8 @@ import FourImages from "../../images/fourImgs.svg";
 const useStyles = makeStyles((theme) => ({
   infoSection: {
     padding: theme.spacing(5, 0),
+    maxWidth:'100%',
+    overflow: 'hidden',
   },
   infoSectionImg: {
     textAlign: "center",
@@ -72,10 +74,10 @@ const NewRich = () => {
   const classes = useStyles();
 
   return (
-    <div className={classes.infoSection} style={{border: '1px solid red'}}>
+    <div className={classes.infoSection} >
       <Container style={{ minWidth: "80vw" }}>
         <Grid container spacing={10}>
-          <Grid item xs={10} lg={6} order={{ xs: 1, lg: 1 }}>
+          <Grid item xs={12} lg={6} order={{ xs: 1, lg: 1 }}>
             <div className={`${classes.infoSectionImg} pb-5 pb-lg-0`}>
               <img
                 src={FourImages}

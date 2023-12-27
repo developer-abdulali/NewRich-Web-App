@@ -298,6 +298,8 @@ const useStyles = makeStyles((theme) => ({
   },
   accordion: {
     marginBottom: theme.spacing(2),
+    boxShadow:'none',
+    backgroundColor:'transparent'
   },
   reachUs: {
     marginTop: theme.spacing(2),
@@ -475,9 +477,6 @@ const Footer = () => {
             <Accordion className={classes.accordion}>
               <Typography
                 style={{
-                  border: "none",
-                  outline: "none",
-                  background: "#10284F",
                   color: "white",
                   fontSize: 20,
                   fontStyle: "normal",

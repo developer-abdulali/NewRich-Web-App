@@ -2,9 +2,7 @@
   margin: 0;
   padding: 0;
 }
-.homepage {
-  margin-top: 100px;
-}
+
 #links {
   color: #111;
   font-size: 18px;
@@ -301,4 +299,8 @@
   cursor: pointer;
   border-radius: 6px;
   background: #198fff;
+}
+
+.MuiAccordion-root:before {
+  background-color: transparent !important;
 }
