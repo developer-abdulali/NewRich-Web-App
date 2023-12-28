@@ -3,7 +3,7 @@ import HeroSection from "./components/HeroSection/HeroSection";
 import NewRich from "./components/NewRich/NewRich";
 import ProcessSection from "./components/ProcessSection/ProcessSection";
 import FeaturedSection from "./components/FeaturedSection/FeaturedSection";
-// import CtaSection from "./components/CTASection/CTASection";
+import CtaSection from "./components/CTASection/CTASection";
 
 const App = () => {
   return (
@@ -12,7 +12,7 @@ const App = () => {
       <NewRich />
       <ProcessSection />
       <FeaturedSection />
-      {/* <CtaSection /> */}
+      <CtaSection />
     </div>
   );
 };

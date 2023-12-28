@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -25,130 +27,29 @@
   margin-right: 19px;
 }
 
-/* .text_box {
-  margin-top: 20vh;
-} */
-
 .text_box {
   margin-top: 20vh !important;
 }
-
-/* Media query for small screens */
-@media only screen and (max-width: 600px) {
-  .text_box {
-    margin-top: 0 !important;
-  }
-
-  .dreamers {
-    color: #198fff !important;
-    text-align: center !important;
-    font-size: 66.8px !important;
-    font-style: normal !important;
-    font-weight: 700 !important;
-    margin: 10px 0px !important;
-    text-transform: uppercase !important;
-  }
-}
-.dreamers {
-  color: #198fff !important;
-  text-align: center !important;
-  font-size: 66.8px !important;
-  font-style: normal !important;
-  font-weight: 700 !important;
-  margin: 10px 0px !important;
-  text-transform: uppercase !important;
-}
-
-.getStartedBtn {
-  width: 125px !important;
-  height: 45px !important;
-  padding: 10px !important;
-  color: white !important;
-  font-weight: 500 !important;
-  border-radius: 6px !important;
-  background: #198fff !important;
-}
-.community1 {
-  color: #313131 !important;
-  font-size: 32px !important;
-  font-style: normal !important;
-  font-weight: 500 !important;
-  line-height: normal !important;
-}
-.joinNow {
-  color: #198fff !important;
-  font-size: 42px !important;
-  font-style: normal !important;
-  font-weight: 600 !important;
-  line-height: normal !important;
-  margin-top: 10px !important;
-}
-.makeThings {
-  color: #313131 !important;
-  font-family: Barlow !important;
-  margin-top: 50px !important;
-  font-size: 48px !important;
-  font-style: normal !important;
-  font-weight: 600 !important;
-  line-height: normal !important;
-  text-transform: uppercase !important;
-}
-.getStartedBtn {
-  width: 150px !important;
-  height: 45px !important;
-  color: white !important;
-  font-weight: 800 !important;
-  outline: none !important;
-  border: none !important;
-  border-radius: 6px !important;
-  background: #198fff;
-  cursor: pointer;
-}
-
 .grid {
   display: flex !important;
   align-items: center !important;
   padding: 0px 10% !important;
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-  .grid {
-    flex-direction: column-reverse;
-    justify-content: center;
-  }
-  .newRich {
-    margin-top: 20px !important;
-    margin-left: 10px;
-  }
+.imgsDiv {
+  display: flex !important;
+  align-items: center !important;
+  flex-direction: column !important;
+  gap: 10px;
 }
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-  .grid {
-    display: none;
-    flex-direction: column-reverse;
-  }
-  .newRich {
-    visibility: hidden;
-  }
-}
-@media only screen and (min-width: 768px) {
-  .grid {
-    flex-direction: row;
-    justify-content: center;
-  }
-  .newRich {
-    padding: 0px 0px;
-  }
-}
-.newRich {
-  color: #198fff;
-  font-family: Barlow;
-  font-size: 22px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 37.552px;
-  margin-top: 8px;
+.roundedIcon > img {
+  overflow: hidden !important;
+  position: absolute !important;
+  top: 20% !important;
+  left: 0 !important;
+  width: 100px !important;
+  height: 100px !important;
+  z-index: -1;
 }
 
 .menuIcon {
@@ -160,10 +61,14 @@
   justify-content: center;
   align-items: center;
   font-size: 1.2rem;
-  background-color: #fff;
+  background: transparent;
   position: sticky;
   top: 0;
   z-index: 20;
+}
+
+.navbar.scrolled {
+  background-color: #fff; /* Change this to your desired color */
 }
 
 .nav-container {
@@ -191,7 +96,9 @@
 }
 
 .nav-logo .icon {
-  display: inline-block;
+  display: flex;
+  gap: 10px;
+  align-items: center;
   width: 3rem;
   height: 3rem;
   margin-left: 16px;
@@ -217,6 +124,9 @@
   line-height: 40px;
   color: black !important;
   margin-right: 1rem;
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 400;
 }
 
 .nav-item:after {
@@ -232,7 +142,7 @@
   display: none;
   color: #f5b921;
 }
-*/ .nav-icon .icon {
+.nav-icon .icon {
   display: inline-block;
   width: 2rem;
   height: 2rem;
@@ -264,7 +174,7 @@
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
-    line-height: 26px; /* 144.444% */
+    line-height: 26px;
     border: none;
   }
   .nav-links {
@@ -293,14 +203,794 @@
   color: white !important;
   font-size: 18px;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 600;
   padding: 10px 35px;
+  font-family: "Barlow";
   line-height: 24px;
   cursor: pointer;
   border-radius: 6px;
   background: #198fff;
 }
 
+.featureContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 20px 0px;
+}
+.features-section {
+  background: #f4f9fe;
+  margin: 50px 0px;
+}
+.features-section-heading {
+  margin-bottom: 20px !important;
+}
+.title {
+  color: #5a5a5a;
+  text-align: center;
+  font-family: Barlow;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.learnFrom {
+  color: #111;
+  text-align: center;
+  font-family: Barlow;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.OflifeStyle {
+  color: #1e92ff;
+  font-family: Barlow;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: lowercase;
+}
+.provenExperts {
+  color: #1e92ff;
+  font-family: Barlow;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: lowercase;
+}
+
 .MuiAccordion-root:before {
   background-color: transparent !important;
+}
+
+.newrichContainer {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 10px 10% !important;
+  margin: 0 auto;
+}
+.whatIs {
+  color: #313131;
+  font-family: Barlow;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: lowercase;
+}
+.newrichSpan {
+  color: #1e92ff;
+  font-family: Barlow;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: lowercase;
+}
+.onlineNetworking {
+  color: #5a5a5a !important;
+  font-family: Barlow !important;
+  font-size: 28px !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  line-height: normal !important;
+}
+.connetWithInstructor {
+  color: #5a5a5a !important;
+  font-family: Barlow !important;
+  font-size: 28px !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  line-height: normal !important;
+}
+.joinNowBtn {
+  color: #fff;
+  font-family: Barlow;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  padding: 10px;
+  border-radius: 6px;
+  margin: 10px 0px;
+  outline: none;
+  border: none;
+  background: #198fff;
+  cursor: pointer;
+}
+
+.ctaContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  gap: 10px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+.likeMinded {
+  color: #111;
+  font-family: Poppins;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 56px;
+  text-transform: lowercase;
+}
+.globeSpan {
+  color: #1f92ff;
+  font-family: Poppins;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 56px;
+  text-transform: lowercase;
+}
+.connectWith {
+  color: #2092ff;
+  font-family: Poppins;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 56px;
+  text-transform: lowercase;
+}
+.thousandPeople {
+  color: #111;
+  font-family: Poppins;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  margin: 20px 0px;
+  line-height: normal;
+}
+.ThenewRich {
+  color: #1e91ff;
+  font-family: Poppins;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.ctaDiv2 > img {
+  width: 301.629px;
+  height: 242.69px;
+  flex-shrink: 0;
+}
+
+.SecondJoinBtn {
+  color: #fff;
+  border-radius: 6px;
+  background: #198fff;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  font-family: Barlow;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  /* line-height: 24px; */
+  /* display: flex; */
+  width: 185px;
+  height: 60px;
+  padding: 10px;
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* gap: 10px; */
+  /* flex-shrink: 0; */
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media (max-width: 600px) {
+  .learnFrom {
+    font-size: 28px !important;
+  }
+  .OflifeStyle {
+    font-size: 28px !important;
+  }
+  .provenExperts {
+    font-size: 28px !important;
+  }
+  .ctaContainer {
+    flex-direction: column-reverse;
+    margin: 10px 10px;
+  }
+  .likeMinded {
+    text-align: center;
+    line-height: 0px;
+    font-size: 24px;
+  }
+  .connectWith {
+    font-size: 24px !important;
+  }
+  .globeSpan {
+    font-size: 24px !important;
+  }
+  .thousandPeople {
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+  }
+  .ThenewRich {
+    font-size: 16px;
+  }
+  .SecondJoinBtn {
+    margin-left: 25%;
+  }
+  .newrichContainer {
+    flex-direction: column;
+  }
+  .imgDiv > img {
+    width: 100%;
+    height: auto;
+    margin: 10px 5px;
+  }
+  .onlineNetworking {
+    text-align: center !important;
+    font-size: 18px !important;
+    margin-top: 10px !important;
+    font-weight: 400;
+    font-family: Barlow;
+  }
+  #pforHiddenonMobile {
+    display: none !important;
+  }
+  .whatIs {
+    text-align: center;
+    color: #313131 !important;
+    font-family: Barlow !important;
+    font-size: 32px !important;
+    font-style: normal !important;
+    font-weight: 600 !important;
+    line-height: normal !important;
+    text-transform: lowercase !important;
+  }
+  .newrichSpan {
+    font-size: 28px;
+  }
+  .connectwithInstructor {
+    text-align: center !important;
+    color: #313131 !important;
+    font-family: Barlow !important;
+    font-size: 18px !important;
+    margin: 20px 0px !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    line-height: normal !important;
+  }
+
+  .community1 {
+    font-size: 22px !important;
+    font-weight: 500 !important;
+    margin-top: 20px !important;
+  }
+  .dreamers {
+    font-size: 36px !important;
+    font-weight: 700 !important;
+    color: #198fff !important;
+    text-align: center !important;
+    font-family: Barlow !important;
+    font-style: normal !important;
+    line-height: normal !important;
+    text-transform: uppercase !important;
+  }
+  .makeThings {
+    color: "#198fff !important";
+    font-family: Barlow !important;
+    font-size: 28px !important;
+    font-style: normal !important;
+    font-weight: 600 !important;
+    line-height: normal !important;
+    margin: 10px 0px !important;
+    text-transform: uppercase !important;
+  }
+
+  .grid {
+    display: none;
+    flex-direction: column-reverse;
+  }
+
+  .getStartedBtn {
+    font-size: 16px !important;
+    color: #fff !important;
+    font-family: Barlow !important;
+    font-size: 20px !important;
+    font-style: normal !important;
+    font-weight: 700 !important;
+    padding: 10px !important;
+    border-radius: 6px;
+    background: #198fff;
+    border: none;
+    outline: none;
+  }
+  .roundedIcon > img {
+    overflow: hidden !important;
+    position: absolute !important;
+    top: 40% !important;
+    left: -30% !important;
+    width: 200px !important;
+    height: 200px !important;
+    z-index: -1;
+  }
+  .divForBG {
+    overflow: hidden !important;
+    position: absolute !important;
+    top: 20% !important;
+    left: 0 !important;
+    width: 300px !important;
+    height: 300px !important;
+    transform: rotate(-67.696deg) !important;
+    flex-shrink: 0 !important;
+    opacity: 0.5 !important;
+    border-radius: 594.37px !important;
+    background: linear-gradient(
+      180deg,
+      #1197e8 0%,
+      #dbf5e0 52.08%,
+      #f3a187 100%
+    ) !important;
+    filter: blur(163.63531494140625px) !important;
+    z-index: -1 !important;
+  }
+}
+
+.newRichText {
+  color: #198fff !important;
+  font-family: Barlow;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 37.552px;
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media (min-width: 600px) {
+  .ctaContainer {
+    flex-direction: column-reverse;
+    margin: 10px 10px;
+  }
+  .likeMinded {
+    text-align: center;
+    line-height: 0px;
+    font-size: 36px;
+  }
+  .connectWith {
+    font-size: 36px !important;
+  }
+  .globeSpan {
+    font-size: 36px !important;
+  }
+  .thousandPeople {
+    font-size: 28px;
+    text-align: center;
+  }
+  .ThenewRich {
+    font-size: 28px;
+  }
+  .SecondJoinBtn {
+    margin-left: 40%;
+  }
+  .ctaDiv2 > img {
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+  }
+  .newrichContainer {
+    flex-direction: column !important;
+    margin-top: 10px !important;
+  }
+  .textDiv {
+    margin-top: 30px;
+  }
+  #pforHiddenonTablet {
+    display: none;
+  }
+  .onlineNetworking {
+    text-align: center;
+    font-size: 20px !important;
+    margin-top: 10px !important;
+    font-weight: 400;
+    font-family: Barlow;
+  }
+  .whatIs {
+    text-align: center;
+    color: #313131 !important;
+    font-family: Barlow !important;
+    font-size: 42px !important;
+    font-style: normal !important;
+    font-weight: 600 !important;
+    line-height: normal !important;
+    text-transform: lowercase !important;
+  }
+  .connectwithInstructor {
+    text-align: center;
+    color: #313131 !important;
+    font-family: Barlow !important;
+    font-size: 18px !important;
+    margin: 20px 0px !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    line-height: normal !important;
+  }
+  .joinNowBtn {
+    margin-left: 36%;
+    color: white !important;
+    font-weight: 600 !important;
+    border-radius: 6px !important;
+    background: #198fff !important;
+    padding: 10px !important;
+  }
+  .community1 {
+    font-size: 22px !important;
+    font-weight: 500 !important;
+  }
+  .dreamers {
+    font-size: 36px !important;
+    font-weight: 700 !important;
+    color: #198fff !important;
+    text-align: center !important;
+    font-family: Barlow !important;
+    font-style: normal !important;
+    line-height: normal !important;
+    text-transform: uppercase !important;
+  }
+  .makeThings {
+    color: "#198fff !important";
+    font-family: Barlow !important;
+    font-size: 28px !important;
+    font-style: normal !important;
+    font-weight: 600 !important;
+    line-height: normal !important;
+    margin: 10px 0px !important;
+    text-transform: uppercase !important;
+  }
+  .joinNow {
+    color: #198fff !important;
+    font-family: Poppins !important;
+    font-size: 28px !important;
+    font-style: normal !important;
+    font-weight: 600 !important;
+    line-height: normal !important;
+  }
+
+  .grid {
+    display: none;
+    flex-direction: column-reverse;
+  }
+
+  .getStartedBtn {
+    font-size: 16px !important;
+    color: #fff !important;
+    font-family: Barlow !important;
+    font-size: 20px !important;
+    font-style: normal !important;
+    font-weight: 700 !important;
+    padding: 10px !important;
+    border-radius: 6px;
+    background: #198fff;
+    border: none;
+    outline: none;
+  }
+  .roundedIcon > img {
+    overflow: hidden !important;
+    position: absolute !important;
+    top: 40% !important;
+    left: -30% !important;
+    width: 200px !important;
+    height: 200px !important;
+    z-index: -1;
+  }
+  .divForBG {
+    overflow: hidden !important;
+    position: absolute !important;
+    top: 20% !important;
+    left: 0 !important;
+    width: 300px !important;
+    height: 300px !important;
+    transform: rotate(-67.696deg) !important;
+    flex-shrink: 0 !important;
+    opacity: 0.5 !important;
+    border-radius: 594.37px !important;
+    background: linear-gradient(
+      180deg,
+      #1197e8 0%,
+      #dbf5e0 52.08%,
+      #f3a187 100%
+    ) !important;
+    filter: blur(163.63531494140625px) !important;
+    z-index: -1 !important;
+  }
+  .grid {
+    flex-direction: column-reverse;
+  }
+  .roundedIcon > img {
+    overflow: hidden !important;
+    position: absolute !important;
+    top: 40% !important;
+    left: 0 !important;
+    width: 200px !important;
+    height: 500px !important;
+    z-index: -1;
+  }
+  .divForBG {
+    width: 100px !important;
+    height: 100px !important;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media (min-width: 768px) {
+  .ctaContainer {
+    flex-direction: column-reverse;
+    padding: 0px 20px;
+    gap: 20px;
+  }
+  .ctaDiv2 > img {
+    width: 100%;
+  }
+  .likeMinded {
+    font-size: 28px;
+    line-height: 30px;
+    text-align: left;
+  }
+  .connectWith {
+    font-size: 28px;
+  }
+  .globeSpan {
+    font-size: 28px;
+  }
+  .thousandPeople {
+    font-size: 20px;
+    text-align: left;
+  }
+  .ThenewRich {
+    font-size: 20px;
+  }
+  .SecondJoinBtn {
+    margin-left: 0px;
+  }
+  .newrichContainer {
+    flex-direction: row !important;
+    margin-top: 10px !important;
+  }
+  .imgDiv > img {
+    width: 90%;
+    height: auto;
+  }
+  .grid {
+    flex-direction: row !important;
+  }
+  .roundedIcon > img {
+    overflow: hidden !important;
+    position: absolute !important;
+    top: 40% !important;
+    left: -20% !important;
+    width: 500px !important;
+    height: 500px !important;
+    z-index: -1;
+  }
+  .divForBG {
+    overflow: hidden !important;
+    position: absolute !important;
+    top: 20% !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 300px !important;
+    transform: rotate(-67.696deg) !important;
+    flex-shrink: 0 !important;
+    opacity: 0.5 !important;
+    border-radius: 594.37px !important;
+    background: linear-gradient(
+      180deg,
+      #1197e8 0%,
+      #dbf5e0 52.08%,
+      #f3a187 100%
+    ) !important;
+    filter: blur(163.63531494140625px) !important;
+    z-index: -1 !important;
+  }
+  .newRichText {
+    color: #198fff !important;
+    font-family: Barlow;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 37.552px;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .ctaContainer {
+    flex-direction: row;
+    padding: 0px 20px;
+    gap: 20px;
+  }
+  .ctaDiv2 > img {
+    width: 100%;
+  }
+  .likeMinded {
+    font-size: 28px;
+    line-height: 30px;
+    text-align: left;
+  }
+  .connectWith {
+    font-size: 28px;
+  }
+  .globeSpan {
+    font-size: 28px;
+  }
+  .thousandPeople {
+    font-size: 20px;
+    text-align: left;
+  }
+  .ThenewRich {
+    font-size: 20px;
+  }
+  .SecondJoinBtn {
+    margin-left: 0px;
+  }
+  .whatIs {
+    text-align: left;
+  }
+  .onlineNetworking {
+    text-align: left;
+  }
+  .connectwithInstructor {
+    text-align: left;
+  }
+  .joinNowBtnDiv > button {
+    margin-left: 0px;
+  }
+  .community1 {
+    font-size: 32px !important;
+    font-weight: 500 !important;
+  }
+  .dreamers {
+    font-size: 66px !important;
+    font-weight: 700 !important;
+    color: #198fff !important;
+    text-align: center !important;
+    font-family: Barlow !important;
+    font-style: normal !important;
+    line-height: normal !important;
+    text-transform: uppercase !important;
+  }
+  .makeThings {
+    color: "#198fff !important";
+    font-family: Barlow !important;
+    font-size: 48px !important;
+    font-style: normal !important;
+    font-weight: 600 !important;
+    line-height: normal !important;
+    margin: 10px 0px !important;
+    text-transform: uppercase !important;
+  }
+  .joinNow {
+    color: #198fff !important;
+    font-family: Poppins !important;
+    font-size: 42px !important;
+    font-style: normal !important;
+    font-weight: 600 !important;
+    line-height: normal !important;
+  }
+  .roundedIcon > img {
+    overflow: hidden !important;
+    position: absolute !important;
+    top: 20% !important;
+    left: -5% !important;
+    width: 500px !important;
+    height: 500px !important;
+    z-index: -1;
+  }
+  .divForBG {
+    overflow: hidden !important;
+    position: absolute !important;
+    top: 0% !important;
+    left: -10% !important;
+    width: 100% !important;
+    height: 300px !important;
+    transform: rotate(-67.696deg) !important;
+    flex-shrink: 0 !important;
+    opacity: 0.5 !important;
+    border-radius: 594.37px !important;
+    background: linear-gradient(
+      180deg,
+      #1197e8 0%,
+      #dbf5e0 52.08%,
+      #f3a187 100%
+    ) !important;
+    filter: blur(163.63531494140625px) !important;
+    z-index: -1 !important;
+  }
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .ctaContainer {
+    flex-direction: row;
+    padding: 10px 20px;
+
+    margin: 0 auto;
+  }
+  .ctaDiv2 > img {
+    width: 100%;
+  }
+  .likeMinded {
+    font-size: 36px;
+    line-height: 30px;
+    text-align: left;
+  }
+  .connectWith {
+    font-size: 36px;
+  }
+  .globeSpan {
+    font-size: 26px;
+  }
+  .thousandPeople {
+    font-size: 28px;
+    text-align: left;
+  }
+  .ThenewRich {
+    font-size: 28px;
+  }
+  .SecondJoinBtn {
+    margin-left: 0px;
+  }
+  #hero {
+    width: 1440px;
+    height: 730px;
+    flex-shrink: 0;
+    margin: 0 auto;
+    padding: 0px 10px;
+  }
+  #newrichContainer {
+    min-width: 80vw !important;
+  }
+  .grid {
+    padding: 0px 0px !important;
+  }
+  .divForBG {
+    overflow: hidden !important;
+    position: absolute !important;
+    left: 0 !important;
+    width: 594.37px !important;
+    height: 591.435px !important;
+    transform: rotate(-67.696deg) !important;
+    opacity: 0.5 !important;
+    border-radius: 594.37px !important;
+    background: linear-gradient(
+      180deg,
+      #1197e8 0%,
+      #dbf5e0 52.08%,
+      #f3a187 100%
+    ) !important;
+    filter: blur(163.63531494140625px) !important;
+    z-index: -1 !important;
+  }
 }

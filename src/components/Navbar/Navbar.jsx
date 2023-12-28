@@ -1,21 +1,38 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { HamburgetMenuClose, HamburgetMenuOpen } from "./Icons";
 import Logo from "../../images/logo.svg";
 
-function NavBar() {
+const NavBar = () => {
   const [click, setClick] = useState(false);
+  const [scrolling, setScrolling] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setScrolling(true);
+      } else {
+        setScrolling(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const handleClick = () => setClick(!click);
   return (
     <>
-      <nav className="navbar">
+      <nav className={`navbar ${scrolling ? "scrolled" : ""}`}>
         <div className="nav-container">
           <NavLink to="/" className="nav-logo">
-            <span className="icon">
+            <div className="icon">
               <img src={Logo} alt="logo" />
-            </span>
-            <span className="newRich">NewRich</span>
+              <span className="newRichText">NewRich</span>
+            </div>
           </NavLink>
 
           <ul className={click ? "nav-menu active" : "nav-menu"}>
@@ -74,35 +91,6 @@ function NavBar() {
       </nav>
     </>
   );
-}
+};
 
 export default NavBar;
-
-// import React, { useState } from "react";
-// import Logo from "../../images/logo.svg";
-// import "./Navbar.css";
-// import { Link } from "react-router-dom";
-// const Navbar = () => {
-//   const [isOpen, setIsOpen] = useState(false);
-//   return (
-//     <navbar className="Navbar">
-//       <img src={Logo} alt="Logo" />
-//       <span className="nav-logo">NewRich</span>
-//       <div className={`nav-items ${isOpen && "open"}`}>
-//         <Link href="/">What is Newrich.com?</Link>
-//         <Link href="/">Careers</Link>
-//         <Link href="/">The Life Style</Link>
-//         <Link href="/contact">Join The Community</Link>
-//         <button className="loginBtn">Login</button>
-//       </div>
-//       <div
-//         className={`nav-toggle ${isOpen && "open"}`}
-//         onClick={() => setIsOpen(!isOpen)}
-//       >
-//         <div className="bar"></div>
-//       </div>
-//     </navbar>
-//   );
-// };
-
-// export default Navbar;
