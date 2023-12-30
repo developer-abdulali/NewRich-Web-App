@@ -35,7 +35,10 @@ const NavBar = () => {
             </div>
           </NavLink>
 
-          <ul className={click ? "nav-menu active" : "nav-menu"}>
+          <ul
+            className={click ? "nav-menu active" : "nav-menu"}
+            style={{ background: "white", padding: "20px" }}
+          >
             <li className="nav-item">
               <NavLink
                 exact

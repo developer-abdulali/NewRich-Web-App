@@ -3,6 +3,7 @@ import { Container, Grid, Accordion, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import FooterLogo from "../../images/footerLogo.svg";
 import LinkedinLogo from "../../images/linkedin.svg";
+import RightArrow from "../../images/rightArrow.svg"
 import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
@@ -71,6 +72,7 @@ const Footer = () => {
                 fontWeight: 500,
                 lineHeight: "26px",
                 textAlign: "left",
+                fontFamily: "Ubuntu",
               }}
             >
               Who We Are
@@ -81,6 +83,7 @@ const Footer = () => {
                 fontSize: 20,
                 fontStyle: "normal",
                 fontWeight: 500,
+                fontFamily: "Ubuntu",
                 lineHeight: "26px",
                 textAlign: "left",
               }}
@@ -105,6 +108,7 @@ const Footer = () => {
                 color: "#198FFF",
                 fontSize: 22,
                 fontStyle: "normal",
+                fontFamily: "Ubuntu",
                 textAlign: "left",
               }}
             >
@@ -123,6 +127,7 @@ const Footer = () => {
                     fontStyle: "normal",
                     textAlign: "left",
                     fontWeight: 500,
+                    fontFamily: "Ubuntu",
                     lineHeight: "26px",
                   }}
                 >
@@ -140,6 +145,7 @@ const Footer = () => {
                     textDecoration: "none",
                     fontStyle: "normal",
                     fontWeight: 500,
+                    fontFamily: "Ubuntu",
                     lineHeight: "26px",
                   }}
                 >
@@ -154,6 +160,7 @@ const Footer = () => {
                     color: "#FFF",
                     fontSize: 20,
                     textDecoration: "none",
+                    fontFamily: "Ubuntu",
                     fontStyle: "normal",
                     fontWeight: 500,
                     textAlign: "left",
@@ -173,6 +180,7 @@ const Footer = () => {
                     fontStyle: "normal",
                     textAlign: "left",
                     textDecoration: "none",
+                    fontFamily: "Ubuntu",
                     fontWeight: 500,
                     lineHeight: "26px",
                   }}
@@ -193,7 +201,7 @@ const Footer = () => {
           >
             <Typography
               variant="h6"
-              style={{ color: "#198FFF", fontSize: 22, fontStyle: "normal" }}
+              style={{ color: "#198FFF", fontSize: 22, fontStyle: "normal", fontFamily: "Ubuntu" }}
             >
               What We're About
             </Typography>
@@ -203,6 +211,7 @@ const Footer = () => {
                   color: "white",
                   fontSize: 20,
                   fontStyle: "normal",
+                  fontFamily: "Ubuntu",
                 }}
               >
                 Happy Individuals = A Happy Planet. We believe that the solution
@@ -211,11 +220,23 @@ const Footer = () => {
                 and the lifestyle that they wish to experience.
               </Typography>
             </Accordion>
+            <Typography
+              variant="h6"
+              style={{ color: "#198FFF", fontSize: 22, fontStyle: "normal", fontFamily: "Ubuntu" }}
+            >
+              Why We Do This
+            </Typography>
+            <Typography
+              variant="h6"
+              style={{marginTop: "10px" , color: "#198FFF", fontSize: 22, fontStyle: "normal", fontFamily: "Ubuntu" }}
+            >
+              Get Involved
+            </Typography>
           </Grid>
         </Grid>
 
         {/* Reach Us */}
-        <div className={`reachus text-center ${classes.reachUs}`}>
+        <div className={`reachus ${classes.reachUs}`}>
           <Link
             href="#"
             style={{
@@ -231,6 +252,7 @@ const Footer = () => {
           >
             <span>Reach Us</span>
           </Link>
+          <img src={RightArrow} alt="" className="rightArrow" />
         </div>
 
         {/* Info Links */}
@@ -273,7 +295,7 @@ const Footer = () => {
                 alignItems: "center",
               }}
             >
-              <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
+              <div className="footerDiv" style={{ listStyle: "none", padding: 0, margin: 0 }}>
                 <li
                   style={{
                     marginRight: "20px",
@@ -312,7 +334,7 @@ const Footer = () => {
                     Terms &amp; Conditions
                   </Link>
                 </li>
-              </ul>
+              </div>
             </Grid>
           </Grid>
         </div>
